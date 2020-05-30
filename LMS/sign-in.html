@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PICT|LMS</title>
+		<link rel="shortcut icon" href="assets/images/favicon.png">
+		<link rel="stylesheet" href="dist/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	    <link rel="stylesheet" type="text/css" href="css/background.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	</head>
+	<body ng-app="" style="background-image: url('images/background1.jpg'); background-size: 100% 100%;">
+
+	<header style="padding-bottom: 55px;">
+		<a href="homepage.html"> <img src="images/logo1.png" class="logo_img"> </a>
+		<b style="float: left; margin-top: 7px; margin-left: 3px; ">Leave Management</b>
+		<a href="sign-in.html">	<button class="logout_btn" title="Login"> Login</button></a> 
+		<a href="profile.html">  <img src="images/profile_icon.jpg" class="profile_icon" title="Profile"> </a>
+        <i class="far fa-question-circle" title="Help" style="float: right;margin-right: 6px;margin-left: 6px; margin-top: 10px;"></i>
+
+	</header>
+		<!-- End Navbar -->
+		<div class="row" style="margin-right:0;">
+			<div class="col-md-12 col-sm-12" id="plms-signin">
+				<div id="login" ng-app="">
+					<center><h3 style="color: white;"><strong>Login</strong></h3></center><br>
+					<center>
+					<img src="assets/images/pict.png">
+					</center>
+					<div id="login-pane" style="color: white;">
+						<center>
+						<form id="login-form" method="post" action="" name="loginForm">
+							<table>
+	                            <tr>
+	                                <td colspan = "2">
+		                                <center>
+		                                        <input type="radio" name="loginAs" value="Student" id="student" required>
+		                                        <label for = "student"><b>Student</b></label>
+		                                        <input type= "radio" name="loginAs" value="Faculty" id="faculty" required>
+		                                        <label for = "faculty"> <b>Faculty</b></label>
+		                                </center>
+	                                </td>
+	                            </tr> 
+	                            <tr>
+	                                <td>
+	                                    <label for = "username">UserID:&nbsp;</label>
+	                                </td>
+	                                <td>
+	                                    <input id="username" type = "text" name="username" required ng-model="uname"><br>
+										<span ng-show="loginForm.username.$touched && loginForm.username.$error.required" style="color:red;font-size:80%;">
+											Don't forget to enter the username.
+										</span>
+	                                </td>
+	                            </tr>           
+								<tr>
+									<td><label for="password">Password:&nbsp;</label></td>
+									<td> 
+	                                    <input id="password" type = "password" name="password" required ng-model="pass"><br>
+										<span ng-show="loginForm.password.$touched && loginForm.password.$error.required" style="color:red;font-size:80%;">
+											Don't forget to enter the password.
+										</span>
+	                                </td>
+								</tr>
+							</table><br>
+							<a href="forgot.html" style="color: yellow;">Forgot Password?</a>&nbsp;Or&nbsp;<a href="registration.html" style="color: yellow;">New User?</a>
+	                        <center>
+	                            <input type="reset" id="reset" class="btn-danger" value="Reset" style="width:100px;font-weight:bold;">&nbsp;
+	                            <input type="button" id="login1" class="btn-success" value="Login" style="width:100px;font-weight:bold;">
+	                            <br><br>
+	                        </center>
+	                        </form>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="dist/bootstrap.min.js"></script>
+		<script src="assets/js/"></script>
+		<script type="text/javascript">
+		$("#login1").click(function() {	
+			var name1 = $("#username").val();
+			var pass1 = $("#password").val();
+			var loginAs = $("input[name='loginAs']:checked").val();
+			$.post("login.php",
+				{
+					name : name1, 
+					pass : pass1,
+					type : loginAs
+				},
+				function(data, status) {
+					alert(data);
+					if (data === "Student") {
+						window.location.href="profile.php";
+					}
+					else if (data === "Head") {
+						window.location.href="hod/HOD_Edit_profile.php";
+					}
+					else if (data === "Faculty") {
+						window.location.href="teacher/Edit_profile.php";
+					}
+					else if (data === "Admin") {
+						window.location.href="admin/navigation.php";	
+					}
+					else
+					{
+						alert(data);
+					}
+				});
+		});
+		</script>
+	</body>
+</html>

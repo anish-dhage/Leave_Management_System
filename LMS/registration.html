@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOMEPAGE</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>   <!--Home Icon-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="dist/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/background.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style2.css">   <!--Use of external CSS-->
+</head>
+<body ng-app="" style="background-image: url('images/background1.jpg'); background-size: 100% 100%;">
+
+	<header style="padding-bottom: 55px;">
+		<a href="homepage.html"> <img src="images/logo1.png" class="logo_img"> </a>
+		<b style="float: left; margin-top: 7px; margin-left: 3px; ">Leave Management</b>
+		<a href="sign-in.html">	<button class="logout_btn" title="Login"> Login</button></a> 
+		<a href="profile.html">  <img src="images/profile_icon.jpg" class="profile_icon" title="Profile"> </a>
+        <i class="far fa-question-circle" title="Help" style="float: right;margin-right: 6px;margin-left: 6px; margin-top: 10px;"></i>
+
+	</header>
+	<!-- End Navbar -->
+   
+<!--        Form Start-->
+    <div class= "col-md-12 col-sm-12" style="margin-top:1%;padding-left:22%; color:white;"> 
+        
+        <center>
+            <h1 style="margin-right: 25%; margin-bottom: 2%">Sign Up Form</h1>
+        </center>
+        <form id="signup-form" name="signup-form" action="signup.php" method="post">
+<!--        Name-->
+          <div class="form-group row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="First name" required>
+            </div>  
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name" required>
+            </div>
+          </div>
+            
+<!-- Designation and ID          -->
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label class="my-1 mr-2">Designation</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="designation" style = "background-color: white; border: 1px solid black;" onchange="showDiv(this);">
+                    <option selected>Choose designation</option>
+                    <option value="2">Admin</option>
+                    <option value="3">Professor</option>
+                    <option value="4">HoD</option>
+                    <option value="6">Student</option>
+                </select>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02" style="margin-top: 1%">ID</label>
+                <input type="text" class="form-control" id="id" name="id" placeholder="Enter College ID" required>
+            </div>
+        </div>
+
+        <div class="form-row" id="teacher" style="display: none;">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom03">CC of:</label>
+                <input type="text" class="form-control" id="cc_of" name="cc_of" placeholder="Enter class. e.g. TE6">
+            </div>  
+            
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom04">Mentor of:</label>
+                <input type="text" class="form-control" id="mentor_of" name="mentor_of" placeholder="Enter batch. e.g. N1">  
+            </div>
+        </div>
+            
+        <div class="form-row" id="stud" style="display: none;">
+            <div class="col-md-4 mb-3">
+                <label class="my-1 mr-2">Year</label>
+                <select class="custom-select my-1 mr-sm-2" id="class" name="class" style = "background-color: white; border: 1px solid black;">
+                    <option selected>Choose Class</option>
+                    <option value="FE">F.E.</option>
+                    <option value="SE">S.E.</option>
+                    <option value="TE">T.E.</option>
+                    <option value="BE">B.E.</option>
+                </select>
+            </div>
+            
+            <div class="col-md-2 mb-3">
+                <label class="my-1 mr-2">Division</label>
+                <select class="custom-select my-1 mr-sm-2" id="division" name="division" style = "background-color: white; border: 1px solid black;">
+                    <option selected>Choose Division</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <label class="my-1 mr-2">Batch</label>
+                <select class="custom-select my-1 mr-sm-2" id="batch" name="batch" style = "background-color: white; border: 1px solid black;">
+                    <option selected>Choose Batch</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="NA">Not Applicable</option>
+                </select>
+            </div>
+
+        </div>
+
+<!--  Password      -->
+        <div class="form row">
+            <div class="col-md-4 mb-3">
+                <label for="inputPassword3">Password</label>
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+              
+            <div class="col-md-4 mb-3">
+                <label for="inputPassword3">Re-type Password</label>
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" id="confirm" placeholder="Re-type Password">
+            </div>
+        </div>
+ 
+<!--    Security Question-->
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label class="my-1 mr-2">Hint Question</label>
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="hintq" style = "background-color: white; border: 1px solid black;">
+                    <option selected>Select Hint Question</option>
+                    <option value="1">What is your pet name?</option>
+                    <option value="2">Which site do you visit the least?</option>
+                    <option value="3">What is your favourite color?</option>
+                    <option value="4">What was your mother's maiden name?</option>
+                    <option value="5">Where did you go for pre-school?</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3" style="margin-top: 2px">
+                <label class="my-1 mr-2">Answer</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="Enter Answer" name="ans">
+            </div>
+        </div>
+        
+        <div class="form row">
+            <div class="col-md-4 mb-3">
+                <label class="my-1 mr-2">Gender</label>
+                <select class="custom-select my-1 mr-sm-2" id="gender" name="gender" style = "background-color: white; border: 1px solid black;">
+                    <option selected>Choose Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+              
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email-ID" required>
+            </div>
+        </div>
+ 
+		<div class="form-group row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">Address</label>
+                <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
+            </div>  
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Phone Number</label>
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+          </div>
+          
+         <div class="form row">
+            <div class="col-md-4 mb-3">
+                <label class="my-1 mr-2">Department</label>
+                <select class="custom-select my-1 mr-sm-2" id="dept" name="dept" style = "background-color: white; border: 1px solid black;">
+                    <option selected>Choose Department</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
+                    <option value="Applied Science">Applied Science</option>
+                </select>
+            </div>
+              
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" placeholder="D.O.B" required>
+            </div>
+        </div>
+ 
+        <center>
+          <div class="form-group row" style="margin-left: 25%">
+            <button type="submit" class="btn btn-dark" style="margin-right: 1%">Sign Up</button>
+            <button type="reset" class="btn btn-dark" >Reset</button>
+            </div>
+        </center>
+            
+        </form>
+</div>
+<!-- Form End-->
+    
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="dist/bootstrap.min.js"></script>
+		<script src="assets/js/common.js"></script>
+        <script src="js/index.js"></script>
+        <script type="text/javascript">
+            function showDiv(elem){
+               if(elem.value == 6){
+                  document.getElementById('stud').removeAttribute("style");
+                  document.getElementById('teacher').setAttribute("style","display:none");
+                }
+               else if(elem.value == 2){
+                  document.getElementById('stud').setAttribute("style","display:none");
+                  document.getElementById('teacher').setAttribute("style","display:none");
+                }       
+              else{
+                document.getElementById('teacher').removeAttribute("style");
+                document.getElementById('stud').setAttribute("style","display:none");
+                }
+            }            
+        </script>
+	</body>
+</html>
