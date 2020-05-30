@@ -1,0 +1,185 @@
+body{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("assets/img/PICT-Pune.jpg");
+
+    background-size: 100% 100%;
+    background-position: center;
+     background-repeat: no-repeat;
+}
+
+.login-page{
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+
+.form{
+    position: relative;
+    z-index: 1;
+    background:rgba(30,30,30,0.7);
+    max-width: 360px;
+    margin:0px auto 50px;
+    padding: 40px;
+    text-align: center;
+}
+/*---------------header----------------*/
+
+.header-div{
+    background-color: #333;
+}
+
+.header-div h1{
+      font-family: "Times New Roman", sans-serif;
+    color: aliceblue;
+        text-transform: uppercase;
+   
+    width: 100%;
+    vertical-align: middle;
+    
+}
+
+.header-menu{
+  overflow: hidden;
+  background-color: #333;
+}
+
+.header-logo{
+    height: 100px;
+    width: 350px;
+    padding: 15px 0 0 15px;
+}
+
+.header-menu a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+ background-color: #4CAF50;
+  color: white;
+      width: 20%;
+    cursor: pointer;
+   
+}
+.header-menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*---------------header end-----------------*/
+/*--------------footer------------------*/
+.footer-div{
+
+   width: 100%;
+   background:rgba(85,85,85,0.7);
+    padding: 60px 0px;
+   color: white;
+   text-align: center;
+   
+}
+
+.footer-div a{
+    margin: 15px 0 0;
+    color: aliceblue;
+    font-size: 14px;
+}
+
+/*--------------footer--------------------*/
+
+
+
+.form input{
+    font-family: "Roboto",sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type=button]{
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #AA0114;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color:cornsilk;
+    font-size: 14px;
+    cursor: pointer;
+}
+input[type=submit]{
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #AA0114;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color:cornsilk;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+input[type=button]:hover,input[type=button]:active{
+    background: #43A047;
+}
+input[type=submit]:hover,input[type=submit]:active{
+    background: #43A047;
+}
+
+.form .message{
+    margin: 15px 0 0;
+    color: aliceblue;
+    font-size: 14px;
+    
+}
+input[type=checkbox]{
+     width: 13px;
+    height: 13px;
+}
+
+.form .message a{
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+
+.form .message2{
+    margin: 15px 0 0;
+    color: aliceblue;
+    font-size: 14px;
+    
+}
+
+.form .message2 a{
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form .register-form{
+    display: none;
+    
+}
+
+.form h1{
+    color: aqua
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

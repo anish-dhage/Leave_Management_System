@@ -1,0 +1,71 @@
+header{
+    border-bottom: 0.1px solid rgb(132, 215, 236); 
+    padding: 5px; 
+    font-size: x-large; 
+    height: 45px;
+    color: snow;
+}
+
+
+.row{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.nav_btn{
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    background: none;
+    float: right;
+    color: paleturquoise;
+    border: none; 
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+
+.nav_btn:hover{
+    color: rgb(104, 224, 224);
+    background-color: rgba(157, 182, 214, 0.671);
+}
+
+
+.logo_img{
+    float: left;
+    width: 55px;
+    height: 45px;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.logout_btn{
+    color: white;
+    background-color: rgb(90, 136, 205);
+    font-size: large;
+    border-radius: 7px;
+    float: right;
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 9px;
+    margin-bottom: 5px;
+    
+}
+
+.logout_btn:hover{
+    background-color: rgb(42, 113, 180);
+}
+
+.profile_icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    float: right;
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 4px;
+    
+}

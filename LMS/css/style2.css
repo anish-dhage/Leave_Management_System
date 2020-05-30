@@ -1,0 +1,52 @@
+#id1{
+			background-color:#555;
+            color:lightgreen;
+            height:50px;
+            width:100px;
+		}
+		#id3{
+			position: absolute;
+			padding: 10px;
+			top:50%;
+			left: 50%;
+			border-radius: 10px;
+			background-color:lightgreen;
+			color:black;
+		}
+		#id4{
+			position: absolute;
+			padding: 10px;
+			top:50%;
+			left: 43%;
+		border-radius: 10px;
+			background-color:lightgreen;
+			color:black;
+		}
+		#home{
+			background-color: grey;
+			color: white;
+
+		}
+		a:hover{
+			background-color: lightgreen;
+
+		}
+		#idf{
+			text-decoration: none;
+			color: white;
+		}
+		#idf1{
+			text-decoration: none;
+			color: white;
+		}
+#idf12{
+			text-decoration: none;
+			color: white;
+		}
+#id89{
+     position: absolute;
+    top:65%;
+    left:7%;
+    
+    
+}

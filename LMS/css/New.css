@@ -1,0 +1,62 @@
+
+
+	.container{
+                padding-right: 350px;
+                padding-left: 270px;
+                padding-top: 50px;
+                margin-top: 30px;
+                height: 1500px;
+            }
+input[type=text], input[type=password] ,input[type=date] {
+                 width: 50%;
+                 
+	
+                 padding: 20px 20px;
+                 margin: 8px 0;
+                 display: inline-block;
+                 border: 1px solid #ccc;
+                 box-sizing: border-box;
+                 border-color: #4b4276;
+                 color:  #4b4276;
+            }
+            input[type=checkbox]{
+                display: inline-block;
+                 border: 1px solid #ccc;
+                 box-sizing: border-box;
+                 border-color: paleturquoise;
+                 color:  paleturquoise;
+            }
+            .commentbox{
+                   display: inline-block;
+                 border: 1px solid #ccc;
+                 box-sizing: border-box;
+                 border-color:#4b4276;
+                 color:  #4b4276;
+            }
+
+            input[type=file]{
+                width: 70%;
+                height: 50px;
+                color: #4b4276;
+                background-color:while  ;
+                margin:8px 0;
+                border:inline-block;
+                margin-left: 100px;
+            }
+                        input[type=submit]{
+                width: 70%;
+                height: 50px;
+                color:white ;
+                background-color:#4b4276 ;
+                margin:8px 0;
+                border:inline-block;
+                margin-left: 100px;
+            }
+	  .curr{
+	background:white;
+	opacity:0.5;
+
+    }
+
+ 
+

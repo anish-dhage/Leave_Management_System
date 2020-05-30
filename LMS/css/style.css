@@ -1,0 +1,31 @@
+#navbar-title{
+    color: white;
+}
+
+input[type= "text"], input[type= "password"], input[type= "number"], input[type= "email"]
+{
+	background: ghostwhite;
+	border: solid 1px white;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgb(78, 77, 77);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:     rgb(78, 77, 77);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:     rgb(78, 77, 77);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:     rgb(78, 77, 77);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:     rgb(78, 77, 77);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:     rgb(78, 77, 77);
+}

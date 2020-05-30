@@ -1,0 +1,142 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+}
+/* FORM ELEMENTS */
+.mySelect {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: medium;
+}
+.myText {
+    padding: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    background-color:transparent;
+    border-bottom:3px solid #FFF;
+    color:#FFF;
+    font-size:medium;
+    font-weight:bold;
+}
+label{
+    font-size:20px;
+    font-weight:bold;
+    color: white;
+    margin-left: 5vw;
+    text-align: center;
+}
+.primaryButton{
+    height: 70%;
+    box-sizing: border-box;
+    background-color: antiquewhite  ;
+    border: 2px white;
+    font-size: large;
+    height: inherit;
+    padding: 10px;
+}
+.primaryButton:hover{
+    background-color: #fffbf3;
+}
+/* CONTAINERS */
+.container{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.gridTabItem{
+    display: grid;
+    grid-template-columns: 21% 15% 40% 14% ;
+    grid-gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.gridTabItem2{
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% auto;
+    grid-gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.selects2btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+/* EXTRAS */
+.info{
+    text-align: center;
+    font-weight: bold;
+}
+.tab,.tab2{
+    padding: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size:medium;
+    font-weight:bold;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.tab{
+    background-color: rgb(132, 215, 236);
+    font-size: small;
+}
+.tab2{
+    background-color: white;
+}
+/* TABLE */
+.myTable{
+    width: 90%;
+    /* background-color: #303F9F; */
+}
+.myTable td,th{
+    color: white;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+.myTable th{
+    background-color: white;
+    color: black;
+}
+/* FIELDSET */
+.myFieldset{
+    padding: 30px;
+}
+.myLegend{
+    font-size: medium;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    height: auto;
+}
+
+/* MODAL */
+.modal{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 85vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9    ); /* Black w/ opacity */
+    display: flex;
+    justify-content: center;
+}
+.modal-content {
+    background-color: transparent;
+    padding: 20px;
+    width: 80%;
+    height: 70%;
+}
+#close:hover,
+#close:focus {
+    cursor: pointer;
+}

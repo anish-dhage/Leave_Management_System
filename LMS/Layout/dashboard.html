@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+
+        <script src="https://kit.fontawesome.com/fe82330dc9.js" crossorigin="anonymous"></script>
+        <link rel = "stylesheet" href = "background.css">
+        <link rel = "stylesheet" href = "dashboard.css">
+
+    </head>
+
+    <body style="background-image: url('images/background1.jpg'); background-size: 100% 100%;">
+        
+        <header>
+            <img src="images/logo1.png" class="logo_img">
+            <b style="float: left; margin-top: 7px; margin-left: 3px;">Leave Management</b>  
+            <button class="logout_btn" title="Logout"> Logout</button>
+            <img src="images/profile_icon.jpg" class="profile_icon" title="Profile" onclick="profile()">
+            <i class="far fa-question-circle" title="Help" style="float: right;margin-right: 6px;margin-left: 6px; margin-top: 10px;"></i>
+        
+        </header>
+        
+        <section>
+        
+            <nav style="border-right: 1px solid rgb(132, 215, 236); width: 15%; float: left; height: 700px;padding: 5px;">
+             
+                <table style=" margin-top: 10px; margin-left: 10px; width: 150px;">
+             
+                    <tr class="row"> 
+                        <td>  
+                            <button class="nav_btn" title="Compose" onclick="compose()" style="height: 40px; background-color: antiquewhite; color: rgb(17, 12, 90);">
+                                <i class="fas fa-feather-alt fa-lg" style="color:  rgb(20, 119, 119); float: left; margin-right: 15px;"></i> 
+                                <b>Compose</b>
+                            </button> 
+                        </td> 
+                    </tr>
+             
+                    <tr class="row"> 
+                        <td>  
+                            <button class="nav_btn" title="Inbox" onclick="inbox()">
+                                <i class="fas fa-inbox fa-lg" style="color:  paleturquoise; float: left;margin-right: 15px"></i>
+                                <b>Inbox</b>
+                            </button> 
+                        </td> 
+                    </tr>
+
+                    <tr class="row"> 
+                        <td>  
+                            <button class="nav_btn" title="Approved">
+                                <i class="fas fa-thumbs-up fa-lg" style="color:  paleturquoise; float: left;margin-right: 15px"></i>
+                                <b>Approved</b>
+                            </button> 
+                        </td> 
+                    </tr>
+                    
+                    <tr class="row"> 
+                        <td>  
+                            <button class="nav_btn" title="Rejected">
+                                <i class="fas fa-thumbs-down fa-lg" style="color:  paleturquoise; float: left;margin-right: 15px"></i>
+                                <b>Rejected</b>
+                            </button> 
+                        </td> 
+                    </tr>
+
+                    <tr class="row"> 
+                        <td>  
+                            <button class="nav_btn" title="Pending">
+                                <i class="fas fa-hourglass-half" style="color:  paleturquoise; float: left;margin-right: 15px"></i>
+                                <b>Pending</b>
+                            </button> 
+                        </td> 
+                    </tr>
+
+                    <tr class="row"> 
+                        <td> 
+                            <button class="nav_btn" title="Starred" >
+                                  <i class="fas fa-star fa-lg" style="color: paleturquoise; float: left; margin-right: 15px"></i> 
+                                <b>Starred</b>
+                            </button> 
+                        </td> 
+                    </tr>
+             
+                    <tr class="row"> 
+                        <td>  
+                            <button class="nav_btn" title="Sent">
+                                <i class="fas fa-paper-plane fa-lg" style="color: paleturquoise; float: left; margin-right: 15px"></i>
+                                <b>Sent</b>
+                            </button> 
+                        </td> 
+                    </tr>
+             
+                    <tr class="row"> 
+                        <td> 
+                            <button class="nav_btn" title="Drafts">
+                                <i class="fas fa-file fa-lg" style="color: paleturquoise; float: left; margin-right: 20px"></i> 
+                                <b>Drafts</b>
+                            </button> 
+                        </td> 
+                    </tr>
+             
+                    <tr class="row"> 
+                        <td> 
+                            <button class="nav_btn" title="Bin">
+                                <i class="fas fa-trash fa-lg" style="color: paleturquoise; float: left; margin-right: 20px"></i> 
+                                <b>Bin</b>
+                            </button> 
+                        </td> 
+                    </tr>
+ 
+                    <tr class="row"> 
+                        <td> 
+                             <button class="nav_btn" title="Adjustment">
+                                <i class="fas fa-wrench fa-lg" style="color: paleturquoise; float: left; margin-right: 15px"></i> 
+                                <b>Adjustment</b>
+                            </button> 
+                        </td> 
+                    </tr>
+                
+                </table>
+            </nav>
+
+             <nav style="height: 30px; width: 65% ; margin: 10px; float: left; padding-top: 8px;">
+                <button class="function_icon" title="Calendar" onclick="calendar()"> 
+                    <i class="fas fa-calendar-alt fa-2x" style="color: paleturquoise;"></i>
+                </button>
+                <button class="function_icon" title="Refresh">
+                    <i class="fas fa-redo-alt fa-2x" style="color: paleturquoise;"></i>
+                </button>
+                <button class="function_icon" title="Notes">
+                    <i class="fas fa-clipboard fa-2x" style="color: paleturquoise;"></i>
+                </button>
+                
+                
+                
+            </nav>
+
+            <aside>
+                <h3 style="text-align: center; text-decoration: underline; color: rgb(226, 3, 3); letter-spacing: 1.5px; word-spacing: 2px;">Important Notes</h3>
+                <ul>
+                    <li> Leaves will not be granted on 22nd Jan 2020.</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </aside>
+            
+            <iframe src="inbox.html" class="request_queue"></iframe>
+            
+            
+        </section>
+        
+        <footer style="border: 1px solid black; padding: 5px;clear: both;">contact the footer</footer>
+    </body>
+</html>
